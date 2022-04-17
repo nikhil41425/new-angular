@@ -72,6 +72,6 @@
 
 <h1 *ngIf="myStatement">ng if ex</h1>
 
-<h1 *ngFor="let data of users" [ngClass]="{'hello': users.userName == 'User1'}">{{data.userName}}</h1>
+<h1 *ngFor="let data of users" [ngClass]="{'hello': data.userName == 'User1'}">{{data.userName}}</h1>
 
 <h1 *ngFor="let data of users" [ngStyle]="{'hello': myStatement ? 'blue' : 'red' }">{{data.userName}}</h1>

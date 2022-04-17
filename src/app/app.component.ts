@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { User } from './main';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,7 @@ export class AppComponent {
 
   fruits:any[]=["mango","apple","orange"]
 
-  users: any= [
+  users= [
     {
     "userId": 1,
     "userName": 'User1'
