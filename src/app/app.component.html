@@ -1,77 +1,77 @@
-<h1>hellooo</h1>
+<router-outlet></router-outlet>
+
+<!-- 
+<form #myData='ngForm' name="form" (ngSubmit)="onFormSubmit(myData)">
+  <div class="row">
+     <div class="col-sm-6">
+      <label class="form-label" for="username">username</label>
+      <input class="form-control" type="text" #username="ngModel" name="username" minlength="2" 
+      [(ngModel)]="formData.username" >
+      </div>
+      <br>
+     <div class="col-sm-6">
+      <label class="form-label" for="username">mobile</label>
+      <input class="form-control" type="text" name="mobile" [(ngModel)]="formData.mobile" #mobile="ngModel" >
+     
+      <br>
+      <button class="btn btn-success" type="submit">submit</button>
+     </div>
+  </div>
+</form>
+<br><br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>sno</th>
+      <th>username</th>
+      <th>mobile</th>
+      <th>delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of data; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{x.username}}</td>
+      <td>{{x.mobile}}</td>
+      <td><button class="btn btn-danger" (click)="delete(i)">delete</button></td>
+    </tr>
+  </tbody>
+</table>
 
 
 
-<!--data bindings-->
 
-<!--
-  4 types of data bindings
 
-  1-string interpolation --- {{}} ex : {{data}}
-  2-property binding --- []  ex : [value]="property"
-  3-event binding -- ()  ex: (click)="onClick()"
-  4-two way data binding -- [(ngModel)]  ex: [(ngModel)]="property"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--tdf vs reactive
+
+  code in html      //  code in ts file
+  tdf - [(ngModel)]  //  no ngmodel
+  complex for testing // easy to test
+
+
 
 -->
 
-<h1>my name is {{name}}</h1>
-
-<h1 [class]="myColor">class binding</h1>
-<h1 [style.color]="'green'">style binding</h1>
-<input [class]="myColor" type="text" [value]="'nikhil'"><br><br>
-
-<button (click)="myclick()">click</button>
-
-<h1>{{myData}}</h1>
-
-<input (keyup)="0" type="text" #nikhil>
-
-<p>{{nikhil.value}}</p>
-
-
-
-<!--directives-->
-
-<!--
-
-  1- component 
-  2-structural -- *ngIf , *ngFor , *ngSwitch
-  3-attribute -- [ngClass] , [ngStyle]
-
-
--->
-
-
-<ul [ngSwitch]="logInName">
-  <li *ngSwitchCase="'user'">
-  <p>User is logged in..</p>
-  </li>
-  <li *ngSwitchCase="'admin'">
-  <p>admin is logged in</p>
-  </li>
-  <li *ngSwitchDefault>
-  <p>Please choose login name</p>
-  </li>
-</ul>
-
-<ul *ngFor="let data2 of fruits">
-  <li >{{data2}}</li>
-</ul>
-
-<select  >
-  <option *ngFor="let data1 of fruits" value="select">{{data1}}</option>
-</select>
-
-<select name="" id="">
-  <option value="">1</option>
-  <option value="">2</option>
-  <option value="">3</option>
-  <option value="">4</option>
-</select>
-
-
-<h1 *ngIf="myStatement">ng if ex</h1>
-
-<h1 *ngFor="let data of users" [ngClass]="{'hello': data.userName == 'User1'}">{{data.userName}}</h1>
-
-<h1 *ngFor="let data of users" [ngStyle]="{'hello': myStatement ? 'blue' : 'red' }">{{data.userName}}</h1>

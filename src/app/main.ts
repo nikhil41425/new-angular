@@ -1,4 +1,4 @@
-export class User{
-    userId:any;
-    userName:any;
+export class Main{
+    username:any;
+    mobile:any;
 }

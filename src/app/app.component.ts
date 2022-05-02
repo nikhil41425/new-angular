@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { User } from './main';
-
+import { NgForm } from '@angular/forms';
+import { Main } from './main';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,36 +9,20 @@ import { User } from './main';
 export class AppComponent {
   title = 'project1';
 
-  name="nikhil"
-
-  myColor="color"
-
-  myData:any;
-  myModel:any;
-  templateee:any;
-  logInName = 'user'
-
-  myStatement:boolean=false;
-
-  fruits:any[]=["mango","apple","orange"]
-
-  users= [
-    {
-    "userId": 1,
-    "userName": 'User1'
-    },
-    {
-    "userId": 2,
-    "userName": 'User2'
-    },
-    ];
+  data:any[]=[]
    
+  formData:Main = new Main
 
-  myclick(){
+  validF:boolean=true
 
-    // this.myData="hello nikhil"
-
-    alert("helloooo")
-
+  onFormSubmit(myData:NgForm){
+    this.validF=false
+    this.data.push(myData.value)
+    myData.resetForm();
   }
+
+  delete(i:any){
+    this.data.splice(i,1)
+  }
+  
 }
