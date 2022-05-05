@@ -21,7 +21,7 @@ export class ElectronicsComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.showcase=this.dataservice.addUsers();
+    // this.showcase=this.dataservice.addUsers();
 
     this.loginForm=this.fb.group({
       email:['',Validators.required],
